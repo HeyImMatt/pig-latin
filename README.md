@@ -8,11 +8,11 @@ _This site will contain an input in which users can enter the text they wish to 
 * The program does nothing to non-alphabetical characters because they do not contain consonants or vowels
   - Input: 3
   - Output: 3
-  - Complete: False
+  - Complete: True
 * The program adds "way" to single letter words beginning with a vowel
   - Input: i
   - Output: iway
-  - Complete: False
+  - Complete: True
 * The program adds "way" to multi-letter words beginning with a vowel
   - Input: angle
   - Output: angleway

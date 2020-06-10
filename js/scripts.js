@@ -1,6 +1,11 @@
 // Business Logic
 function translate(param) {
-  return param
+  const vowels = ["a", "e", "i", "o", "u"];
+  let newParam = param;
+  if (vowels.includes(param.charAt(0))) {
+    newParam = param + "way"
+  }
+  return newParam
 }
 //UI Logic
 $(document).ready(function () {
