@@ -24,15 +24,15 @@ _This site will contain an input in which users can enter the text they wish to 
 * For words beginning with two or more consonants, move all of the first consecutive consonants to the end, and add "ay"
   - Input: translator
   - Output: anslatortray
-  - Complete: False
+  - Complete: True
 * words starting with "qu" will move both letters to the end and add "ay" 
   - Input: quiet
   - Output: ietquay
-  - Complete: False
+  - Complete: True
 * words with a consonant before "qu" will travel with "qu" to the end of the word and have "ay" added to the end
   - Input: squeal
   - Output: ealsquay
-  - Complete: False
+  - Complete: True
 * Words captitalizations are preserved
   - Input: Apple
   - Output: Appleway
