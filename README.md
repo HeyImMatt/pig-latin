@@ -16,11 +16,11 @@ _This site will contain an input in which users can enter the text they wish to 
 * The program adds "way" to multi-letter words beginning with a vowel
   - Input: angle
   - Output: angleway
-  - Complete: False
+  - Complete: True
 * The program moves the first letter of a word to the end for words beginning with a consonant or "y" and adds "ay" to the very end
   - Input: car
   - Output: arcay
-  - Complete: False
+  - Complete: True
 * For words beginning with two or more consonants, move all of the first consecutive consonants to the end, and add "ay"
   - Input: translator
   - Output: anslatortray

@@ -4,6 +4,9 @@ function translate(param) {
   let newParam = param;
   if (vowels.includes(param.charAt(0))) {
     newParam = param + "way"
+  } else {
+    const firstLetter = param.charAt(0)
+    newParam = param.substring(1, param.length) + firstLetter + "ay"
   }
   return newParam
 }
