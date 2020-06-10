@@ -38,11 +38,11 @@ _This site will contain an input in which users can enter the text they wish to 
   - Output: Appleway
   - Input: Translator
   - Output: anslatorTray
-  - Complete: False
+  - Complete: True
 * Sentence structure in the output will reflect the user's input
   - Input: I love you
   - Output: Iway ovelay ouyay
-  - Complete: False
+  - Complete: True
 * Words and sentences will retain the proper placing of special characters such as "," or "!" 
   - Input: Apples, oranges, bananas!
   - Output: Applesway, orangesway, ananasbay!
