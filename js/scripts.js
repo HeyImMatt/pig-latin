@@ -1,3 +1,13 @@
+//UI Logic
+$(document).ready(function () {
+  $("#input").submit(function (event) {
+    event.preventDefault()
+    const yourSentence = $("#your-sentence").val();
+    const result = translate(yourSentence);
+    $("#output").append(`<p>${result}</p>`);
+  });
+});
+
 // Business Logic
 function translate(startingSentence) {
   const wordArray = startingSentence.split(" ");
@@ -43,14 +53,3 @@ function punctuationCheck(word) {
   }
   return word;
 }
-
-//UI Logic
-$(document).ready(function () {
-  $("#input").submit(function (event) {
-    event.preventDefault()
-    const yourSentence = $("#your-sentence").val();
-    const result = translate(yourSentence);
-
-    $("#output").append(`<p>${result}</p>`);
-  });
-});
