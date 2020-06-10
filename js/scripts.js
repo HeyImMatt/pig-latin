@@ -10,25 +10,25 @@ function translate(startingSentence) {
 function translateWord(startingWord) {
   const vowels = ["a", "e", "i", "o", "u"];
   const consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+  const firstLetter = startingWord.charAt(0).toLowerCase();
   let translatedWord = startingWord;
-  if (vowels.includes(startingWord.charAt(0).toLowerCase())) {
+  
+  if (vowels.includes(firstLetter)) { 
     translatedWord = startingWord + "way"
-  } else if (consonants.includes(startingWord.charAt(0).toLowerCase())) {
-    for (let i = 0; i < startingWord.length; i++) {
+  } else if (consonants.includes(firstLetter)) {
+    for (let i = 0; i < startingWord.length; i++) { //starts loop to find consecutive consonants
       if (vowels.includes(startingWord.charAt(i))) {
         break;
-      } else if ((translatedWord.charAt(0) === 'q'|| translatedWord.charAt(0) === 'Q') && (translatedWord.charAt(1) === 'u'|| translatedWord.charAt(1) === 'U')) {
-        translatedWord = translatedWord.substring(2, translatedWord.length) + translatedWord.slice(0,2);
+      } else if (translatedWord.charAt(0).toLowerCase() === 'q' && translatedWord.charAt(1).toLowerCase() === 'u') { //tests for qu within the word to move them to end together
+        translatedWord = translatedWord.substring(2, translatedWord.length) + translatedWord.slice(0, 2);
       }
       else {
-        const letter = startingWord.charAt(i)
-        translatedWord = translatedWord.substring(1, translatedWord.length) + letter;
+        translatedWord = translatedWord.substring(1, translatedWord.length) + startingWord.charAt(i); // moves consonants to the end of the word
       }
     }
     translatedWord += "ay";
   }
-  const finalWord = punctuationCheck(translatedWord)
-  return finalWord
+  return punctuationCheck(translatedWord)
 }
 
 function punctuationCheck(word) {
