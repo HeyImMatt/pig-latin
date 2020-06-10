@@ -46,7 +46,7 @@ _This site will contain an input in which users can enter the text they wish to 
 * Words and sentences will retain the proper placing of special characters such as "," or "!" 
   - Input: Apples, oranges, bananas!
   - Output: Applesway, orangesway, ananasbay!
-  - Complete: False
+  - Complete: True
 
 
 ## Setup/Installation Requirements

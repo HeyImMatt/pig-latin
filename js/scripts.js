@@ -27,8 +27,23 @@ function translateWord(startingWord) {
     }
     translatedWord += "ay";
   }
-  return translatedWord
+  const finalWord = punctuationCheck(translatedWord)
+  return finalWord
 }
+
+function punctuationCheck(word) {
+  const punctuation = [ ",", "!", ".", "(", ")", "?", ":", ";" ]
+  let punctuatedWord;
+
+  for (i = 0; i < word.length; i++) {
+    if (punctuation.includes(word.charAt(i))) {
+      punctuatedWord = word.slice(0, i) + word.slice(i + 1, word.length) + word.slice(i, i + 1);
+      return punctuatedWord;
+    }
+  }
+  return word;
+}
+
 //UI Logic
 $(document).ready(function () {
   $("#input").submit(function (event) {
